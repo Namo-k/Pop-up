@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pop-up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Pop-up</h1>
+    <button id="openBtn">Click me</button>
+    <dialog id="dialog">
+        <button id="closeBtn">Close</button>
+        <h2>Mes autres trucs</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit culpa, voluptates, beatae blanditiis ipsum ratione eaque molestias mollitia error eius ex sed odio maiores deleniti officia, aspernatur laudantium eveniet fuga?
+        axime itaque esse! Unde praesentium deleniti, facilis placeat inventore ex, amet rerum dignissimos voluptas magnam laborum error cupiditate sed quos dolorum!
+        Quod nostrum minima blanditiis doloremque consectetur nesciunt, omnis eaque distinctio placeat provident possimus quisquam tempora enim aperiam sunt similique saepe molestias libero tempore ipsa harum! Minima ipsum dolorum possimus nisi.
+        Ex, adipisci. Deleniti, ex numquam minus natus commodi consequuntur quia sequi, optio expedita quasi atque molestiae enim recusandae id a eum maxime vel ratione nulla praesentium. Quam magni ad fuga?</p>
+    </dialog>
+
+    <script type="text/javascript">
+        // alert("Pop-pup!");
+    </script>
+    <script>
+        const dialog = document.getElementById('dialog');
+        const openBtn = document.getElementById('openBtn');
+        const closeBtn = document.getElementById('closeBtn');
+
+        openBtn.addEventListener('mouseover',
+        function() {
+            dialog.setAttribute('open', true);
+        })
+
+        closeBtn.addEventListener('click',
+        function(){
+            dialog.removeAttribute('open');
+        });
+
+        // Code inspiré de la video  https://www.youtube.com/watch?v=KTmyC3q28VM&ab_channel=ThomasBredDev
+    </script>
+</body>
+</html>
